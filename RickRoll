@@ -1,0 +1,16 @@
+#include "DigiKeyboard.h"
+void setup() {
+  //empty
+}
+void loop() {
+  DigiKeyboard.delay(500);
+  // windows + R to open run menu
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(50);
+  // paste the youtube link for the rick n roll
+  DigiKeyboard.print("https://youtu.be/dQw4w9WgXcQ?t=43s");
+  // enter to send command
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+
+  for(;;){ /*empty*/ }
+}
