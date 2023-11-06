@@ -1,0 +1,17 @@
+#include "DigiKeyboard.h"
+void setup() {
+  //empty
+}
+void loop() {
+  DigiKeyboard.delay(500);
+  // do: Windows + R, to open run menu
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(50);
+  // run this website below, which will open a fake update screen for windows
+  // which will be fullscreened to seem legit
+  DigiKeyboard.print("http://fakeupdate.net/win10ue");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(50);
+  DigiKeyboard.sendKeyStroke(KEY_F11);
+  for(;;){ /*empty*/ }
+}
